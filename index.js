@@ -1,14 +1,8 @@
-const btn = document.getElementById('btn');
-const dateChange = document.getElementById("date-transfer");
+const dateElement = document.getElementById("date");
 
-let today = new Date().toLocaleDateString();
+let today = new Date();
+let day = today.getDate();
+let month = today.getMonth() + 1;
+let year = today.getFullYear();
 
-
-btn.addEventListener('click', () => {
-  const box = document.getElementsByClassName('hobbies')[0];
-  //  hides element
-  box.style.visibility = 'hidden';
-  dateChange.textContent ="Today's Date : "+ today;
-
- 
-});
+dateElement.textContent = `Today's date is ${day}/${month}/${year}`;
