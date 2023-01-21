@@ -1,124 +1,136 @@
-body {
-  font-family: "Slabo 27px", serif;
-  font-size: 1.5rem;
-  background-color: #fdfffc;
+
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
 }
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+body{
+  text-align: center;
+  background-color: aquamarine;
+  background-position: cover;
+  background-size: 100%;
+  background-image: url(assets/bg3.jpeg);
+    /* font-family: 'Zilla Slab', serif; */
+      color: #4b494b;
+
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+  margin-bottom: 80px;
 }
 
-strong {
+.review-box{
+  width: 90%;
+  max-width:700px ;
+  height: 600px;
+  /* border-radius: 10px; */
+  /* box-shadow: -10px 10px 40px rgba(0,0,0,0.25); */
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  /* //glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero .card{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 600px;
   position: relative;
 }
-
-strong::before {
-  background-color: #ff6663;
-  content: "";
-  position: absolute;
-  width: calc(100% + 4px);
-  height: 60%;
-  left: -2px;
-  bottom: 0;
-  z-index: -1;
-  transform: rotate(-2deg);
+.hero .card .img-container{
+  height: 100%;
+  /* max-height: 300px; */
+  width: 70%;
+  
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
+img{
+  height: 600px;
+   width: 100%;
+   object-fit: cover;
+  
+
+  /* border-radius: 50%; */
 }
-.sect h2 {
-  color: #ff6663;
-}
-.right-2 {
+.info{
+  height: 100%;
+  width: 45%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap:17px;
+}
+.info h3{
+  font-size: 2rem;
 }
 
-.footer {
-  padding: 1% 5%;
-  text-align: center;
-  background-color: #373b44;
+#slide{
+  width: 100%;
+  padding-right: 60px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.sidebar{
+  width:60px;
+  height: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  /* background-color: orangered; */
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  background-color: #3a3a39;
+height: 120px;
+width: 625px;
+font-size: 80px;
+/* margin:200px auto; */
+text-align: center;
+text-transform: uppercase;
+font-family: 'Zilla Slab', serif;
+  color: transparent;
+  -webkit-background-clip: text; /*puts the shadow under the text*/
+  text-shadow: 0 8px 5px rgba(255, 255, 255, 0.12);
+}
+footer span{
   color: white;
 }
 
-.footer a {
-  color: #fe4b74;
-  font-weight: 500;
-  text-decoration: none;
+.sidebar svg{
+  transition: transform .3s; /* Animation */
 }
 
-.date {
-  color: #ff6663;
+.sidebar svg:hover{
+  transform: scale(1.5);
 }
-body {
-  font-family: "Slabo 27px", serif;
-  font-size: 1.5rem;
-  background-color: #fdfffc;
-}
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+.img-container img{
+  transition: transform .5s; /* Animation */
 }
 
-strong {
-  position: relative;
-}
-
-strong::before {
-  background-color: #ff6663;
-  content: "";
-  position: absolute;
-  width: calc(100% + 4px);
-  height: 60%;
-  left: -2px;
-  bottom: 0;
-  z-index: -1;
-  transform: rotate(-2deg);
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.sect h2 {
-  color: #ff6663;
-}
-.right-2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer {
-  margin-top: 20px;
-  padding: 1% 5%;
-  text-align: center;
-  background-color: #373b44;
-  color: white;
-}
-
-.footer a {
-  color: #ff6663;
-  font-weight: 500;
-  text-decoration: none;
-}
-.footer svg {
-  z-index: -1;
-}
-
-#date {
-  color: #ff6663;
+.img-container img:hover{
+  transform: scale(1.01);
 }
